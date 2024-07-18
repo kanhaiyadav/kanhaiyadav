@@ -1,4 +1,4 @@
-![MasterHead](https://wallpaperboat.com/wp-content/uploads/2019/10/coding-16.jpg)
+![MasterHead](https://raw.githubusercontent.com/kanishy/kanishy/main/Simple%20Work%20LinkedIn%20Banner.png)
 <h1 align="center">Hi 👋, I'm Kanhaiya Yadav</h1>
 <h3 align="center">A passionate full stack developer</h3>
 
