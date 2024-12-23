@@ -6,7 +6,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kanhaiyadav" alt="kanhaiyadav" /></a> </p>
 
-- 🔭 I’m currently working on **Chatting Web App**
+- 🔭 I’m currently working on **KissanSetu(A webApp for connecting farmers directly with consumers)**
 
 - 🌱 I’m currently learning **Next.js**
 
