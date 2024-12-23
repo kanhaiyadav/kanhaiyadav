@@ -8,7 +8,7 @@
 
 - 🔭 I’m currently working on **Chatting Web App**
 
-- 🌱 I’m currently learning **React**
+- 🌱 I’m currently learning **Next.js**
 
 - 💬 Ask me about **MERN stack**
 
