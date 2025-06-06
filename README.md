@@ -6,11 +6,11 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kanhaiyadav" alt="kanhaiyadav" /></a> </p>
 
-- 🔭 I’m currently working on **KissanSetu(A webApp for connecting farmers directly with consumers)**
+- 🔭 I’m currently working on **HackBox(A webApp which is a collection of lots of small little useful tools)**
 
-- 🌱 I’m currently learning **Next.js**
+- 🌱 I’m currently learning **NextJs**.
 
-- 💬 Ask me about **MERN stack**
+- 💬 Ask me about **Web Development**
 
 - 📫 How to reach me **kanhaiya2004yadav@gmail.com**
 
