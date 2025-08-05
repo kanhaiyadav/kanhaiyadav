@@ -1,30 +1,107 @@
 name: Metrics
 
 on:
-  # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
   workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
-  push: {branches: ["master", "main"]}
+  push: {branches: ["main", "master"]}
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    environment:
-      name: production
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-
+      # Header (basic info)
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           base: header
+          output_action: commit
+          filename: metrics-header.svg
+
+      # Calendar (weekly commits)
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
           plugin_isocalendar: yes
+          output_action: commit
+          filename: metrics-isocalendar.svg
+
+      # Languages used
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
           plugin_languages: yes
+          plugin_languages_ignored: html, css
+          plugin_languages_others: yes
+          output_action: commit
+          filename: metrics-languages.svg
+
+      # Starred repositories
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
           plugin_stars: yes
-          config_order: base.header, isocalendar, languages, stars
+          output_action: commit
+          filename: metrics-stars.svg
+
+      # Achievements
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          output_action: commit
+          filename: metrics-achievements.svg
+
+      # Most starred repositories
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: repositories
+          plugin_repositories: yes
+          plugin_repositories_featured: 0
+          output_action: commit
+          filename: metrics-repositories.svg
+
+      # Developer habits
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_habits: yes
+          plugin_habits_charts: yes
+          plugin_habits_trim: false
+          output_action: commit
+          filename: metrics-habits.svg
+
+      # Code lines added/deleted
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_lines: yes
+          output_action: commit
+          filename: metrics-lines.svg
+
+      # Contributors to your repos
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_contributors: yes
+          output_action: commit
+          filename: metrics-contributors.svg
+
+      # Topics/tags used across repos
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_topics: yes
+          output_action: commit
+          filename: metrics-topics.svg
