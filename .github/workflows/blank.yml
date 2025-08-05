@@ -23,6 +23,10 @@ jobs:
           output_action: pull-request
       - uses: lowlighter/metrics@latest
         with:
+          filename: my-metrics-1.svg
+          output_action: pull-request-merge
+      - uses: lowlighter/metrics@latest
+        with:
           base: header
           plugin_isocalendar: yes
           plugin_languages: yes
